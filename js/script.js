@@ -31,6 +31,8 @@ var Cell = new Class({
     }
 });
 
+// Table Row
+
 var Row = new Class({
     cells: [],
 
@@ -75,6 +77,8 @@ var Row = new Class({
     }
 });
 
+// Header Cell
+
 var HeaderCell = new Class({
     Extends: Cell,
 
@@ -88,6 +92,8 @@ var HeaderCell = new Class({
         this.getRow().getTable().sort(this.getKey()).render();
     }
 });
+
+// Header Row
 
 var HeaderRow = new Class({
     Extends: Row,
@@ -110,6 +116,8 @@ var HeaderRow = new Class({
         return this.getTable().getHead();
     }
 });
+
+// Table
 
 var Table = new Class({
     rows: [],
@@ -178,6 +186,8 @@ var Table = new Class({
     }
 });
 
+// Test data
+
 var data = [{
         "id": 1,
         "gender": "M",
@@ -207,6 +217,8 @@ var data = [{
         "city": "Seattle, WA",
         "status": "Inactive"
     }];
+
+// Usage
 
 var table = new Table(data);
 
